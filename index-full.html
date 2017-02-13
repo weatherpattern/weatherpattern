@@ -40,7 +40,7 @@
 				<section>
 					<h1>Where do you expand a station?</h1>
 					<p>MBTA Green Line</p>
-					<p>New York MTA 2nd Avenue Subway</p>
+					<p>New York MTA 2nd Avenue Subway<p>
 				</section>
 
 				<section>
@@ -65,7 +65,6 @@
 					<p>Aggreate Dataset (e.g. CSV)</p>
 					<p>Historal Archives (e.g. CSV)</p>
 					<p>Realtime API Datafeed (e.g. GTFS)</p>
-				</section>
 
 				<section>
 					<h1>Mapping MBTA Green Line's Reliability</h1>
@@ -107,64 +106,55 @@
 
 				<section>
 					<p>Open Carto</p>
-					<img src="./img/carto.png" width="1024"/>
 				</section>
 
 				<section>
 					<p>Load New dataset</p>
-					<img src="./img/data_upload.png" width="1024"/>
 				</section>
 
 				<section>
-					<p>Make A Map</p>
-					<img src="./img/map_01.png" width="1024"/>
+					<p>Make Static Map</p>
 				</section>
 
 				<section>
 					<p>Select avg(rely) and Choose Color</p>
-					<img src="./img/map_02.png" width="1024"/>
 				</section>
 
 				<section>
 					<p>Make Animated Map</p>
-					<p>under Fill: Choose Quantile, rely, and color</p>
-					<img src="./img/map_03.png" width="1024"/>
 				</section>
 
 				<section>
-					<p>under Column: Choose Service Time</p>
-					<img src="./img/map_04.png" width="1024"/>
+					<p>under XXXX: Choose Quantile, rely, and color</p>
+					<p>under XXXX: Choose Service Time</p>
 				</section>
 
 
 				<section>
 					<h1>Mapping Boston Rapid Transit Station</h1>
 					<p>Who gtes a new station?</p>
+
+				<section>
+					<p>Open a new QGIS file</p>
+					<img src="img/02.png" width="1024">
 				</section>
 
 				<section>
 					<p>Open a new QGIS file</p>
-					<img src="img/new_project_qgis.png" width="1024">
+					<p>Load Zipcode Boston shapefile</p>
+					<p>Save As: zip_nad83.shp</p>
+					<p>Select NAD_1983_StatePlane_Massachusetts_Mainland_FIPS_2001_feet</p>
 				</section>
 
 				<section>
-					<p>Load Boston Basemap</p>
-					<p>Open As: boston_within10km.shp</p>
+					<p>Image</p>
+					<img src="img/02.png" width="1024">
 				</section>
 
 				<section>
-					<p>Load Environmental Justice Blocks</p>
-					<p>Open As: EJ_within10km.shp</p>
-				</section>
-
-				<section>
-					<p>Load MBTA Rapid Transit Stations</p>
-					<p>Open As: mbta_stations.shp</p>
-				</section>
-
-				<section>
-					<p>QGIS with Layers</p>
-					<img src="img/three_layers_qgis.png" width="1024">
+					<p>Load Rapid Transit Stations Shapefile</p>
+					<p>Save As: Filename: MBTA_NODE_WGS84.shp</p>
+					<p>Select NAD_1983_StatePlane_Massachusetts_Mainland_FIPS_2001_feet</p>
 				</section>
 
 				<section>
@@ -173,39 +163,38 @@
 				</section>
 
 				<section>
-					<h1><a href="http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/cen2010ej.html" target="_blank">
-						Environmental Justice Neighborhoods
-					</a></h1>
+					<p>Load Environmental Justice Shapefile</p>
+					<p>Save As: Filename: ej_nad83.shp</p>
+					<p>Select NAD_1983_StatePlane_Massachusetts_Mainland_FIPS_2001_feet</p>
+				</section>
+
+				<section>
+					<h1>Environmental Justice Blocks</h1>
 					<p>What are they?</p>
 					<p>What are their categories?</p>
 				</section>
 
 				<section>
-					<p>Layer Panel: Right-click the EJ layer > Open Attribute Layer</p>
-					<p>Select features using an express</p>
-					<img src="img/ej_attribute_table_qgis.png" width="1024">
+					<p>Select the EJ Blocks layer</p>
+					<p>Find the EJ Blocks contained within zip_nad83_mbta</p>
+					<p>Vector -> Research tools -> Select by Location</p>
+					<p>Layer to select from: ej_nad83</p>
+					<p>Additional layer: zip_nad83_mbta</p>
+					<p>Geometric predicate: intersects</p>
 				</section>
 
 				<section>
-					<p>Select by expression > Income = “I”</p>
-					<img src="img/ej_select_income.png" width="1024">
+					<p>Select for INCOME block</p>
+					<p>Select by Attribute = Income = “I”</p>
 				</section>
 
 				<section>
-					<p>QGIS -> Edit -> Copy Features</p>
-					<p>QGIS ->Edit -> Paste Features As...  -> New Vector Layer</p>
-					<img src="img/income_selected_qgis.png" width="1024">
-				</section>
-
-				<section>
-					<p>Select WGS84</p>
-					<p>Filename: EJ_income_within10km.shp</p>
-					<img src="img/save_vector_qgis.png" width="1024">
-				</section>
-
-				<section>
-					<p>Low Income Environmental Justice Neighborhoods</p>
-					<img src="img/income_selected_qgis_2.png" width="1024">
+					<p>Save selected features as a new layer</p>
+					<p>Select Zip_nad83 layer</p>
+					<p>Edit -> Copy features</p>
+					<p>Edit -> Past features as -> New Vector Layer:</p>
+					<p>Select NAD_1983_StatePlane_Massachusetts_Mainland_FIPS_2001_feet</p>
+					<p>File name: ej_nad83_mbta.shp</p>
 				</section>
 
 				<section>
@@ -214,35 +203,31 @@
 				</section>
 
 				<section>
-					<p>Install NNJOIN</p>
-					<p> QGIS -> Plugins -> Manage and install plugins...</p>
-					<img src="img/nnjoin.png" width="1024">
+					<p> Install NNJOIN plugin</p>
 				</section>
 
 				<section>
 					<p>Find Environmental Justics Blocks Near Neighboring MBTA Station</p>
-					<p>Input vector layer: EJ_income_within10km</p>
-					<p>Join vector layer: MBTA_NODE_WGS84</p>
-					<p>Output layer: ej_near_mbta</p>
-				</section>
-
-				<section>
-					<p>Map neighborhoods by distance to a station</p>
-					<img src="img/graduated.png" width="1024">
+					<p>Input vector layer: el_nad83_mbta</p>
+					<p>Join vector layer: mbta_nad83</p>
+					<p>Output layer: ej_near_mbta_nad83</p>
 				</section>
 
 				<section>
 					<p>Create Categories</p>
-					<p>Right Click -> Layer Properties -> Style ->Graduated:</p>
+					<p>Right Click -> Layer Properties -> Categorized:</p>
 					<p>Select Graduated</p>
 					<p>Column: distance</p>
 					<p>Color Ramp: Blues</p>
 					<p>Mode: Quantile</p>
+					<p>0.00 - 500</p>
+					<p>500-1000</p>
+					<p>1500-2000</p>
+					<p>2000-22561.92(default number)</p>
 				</section>
 
 				<section>
-					<p>Examine your Map</p>
-					<img src="img/final_map.png" width="1024">
+					<h1>Examind your Map</h1>
 				</section>
 
 				<section>
