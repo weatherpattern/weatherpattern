@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Transit Data Mapping Basics</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css">
@@ -26,9 +26,7 @@
 			<div class="slides">
 				<section>
 					<h1>Transit Data Mapping Basics</h1>
-					<p>Maptime Boston - February 15 2017<p>
-					<p><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwiR7MfxhIvSAhWGQSYKHXgiCakQFggaMAA&url=http%3A%2F%2Fdownload.qgis.org%2F&usg=AFQjCNHtl6fy9nuDhwICRwagglAT-YRmMQ&sig2=60ka7xgdCzFrmFNf7c_ewA" target="_blank">
-						Install QGIS</a></p>
+					<p>CartoCamp - March 31 2017<p>
 					<p><a href="https://cran.rstudio.com/" target="_blank">
 						Install R</a></p>
 					<p><a href="https://www.rstudio.com/products/rstudio/download/" target="_blank">
@@ -38,9 +36,15 @@
 				</section>
 
 				<section>
-					<h1>Where do you expand a station?</h1>
-					<p>MBTA Green Line</p>
-					<p>New York MTA 2nd Avenue Subway</p>
+					<h1>Why is Open Transit Data important?</h1>
+				</section>
+
+				<section>
+					<h1>What you will learn? today</h1>
+					<p>Where to find transit data</p>
+					<p>Strategies on wrangling transit data</p>
+					<p>Ways of determining performance</p>
+					<p>Mapping the relability of a transit system</p>
 				</section>
 
 				<section>
@@ -64,19 +68,25 @@
 					<h1>Kinds of Transit Data</h1>
 					<p>Shapefiles</p>
 					<p>Historical Archives (e.g. CSV)</p>
-					<p>Realtime API Datafeed (e.g. <a href="https://developers.google.com/transit/gtfs/" target="_blank>">GTFS</a>)</p>
+					<p>Static and Realtime Data (e.g. <a href="https://developers.google.com/transit/gtfs/" target="_blank>">GTFS</a>)</p>
 				</section>
 
 				<section>
-					<h1>Mapping MBTA Green Line's Reliability</h1>
-					<p><a href="http://www.mbtabackontrack.com/performance/index.html#/explanations#reliabilitysubway" target="_blank">
-						How often do I have an extended wait time?</a></p>
+					<h1>How do you measure performance?</h1>
+					<p>Mapping MBTA Green Line's Reliability</p>
 				</section>
 
+				<section>
+					<h1>It's complicated.</h1>
+					<p><a href="http://www.mbtabackontrack.com/performance/index.html#/explanations#reliabilitysubway" target="_blank">
+						MBTA</a></p>
+					<p><a href="http://web.mta.info/developers/performance.html" target="_blank">
+							MTA</a></p>
+				</section>
 
 				<section>
 					<p>Open TDashboardData_reliability_20160801-20160831.xlsx</p>
-					<p>Or download the data. Note: you must convert it to the a xlsx file.</p>
+					<p>Or download the data.</p>
 					<p><a href="http://www.mbtabackontrack.com/performance/index.html#/download" target="blank"> MBTA On Time Performance</a> </p>
 				</section>
 
@@ -116,6 +126,17 @@
 				</section>
 
 				<section>
+					<p>Create Map</p>
+					<img src="./img/create_map.png" width="800"/>
+				</section>
+
+				<section>
+					<p>Change Type to Date</p>
+					<img src="./img/change_type.png" width="800"/>
+				</section>
+
+
+				<section>
 					<p>Make A Map</p>
 					<img src="./img/map_01.png" width="1024"/>
 				</section>
@@ -123,6 +144,11 @@
 				<section>
 					<p>Select avg(rely) and Choose Color</p>
 					<img src="./img/map_02.png" width="1024"/>
+				</section>
+
+				<section>
+					<p>What do you see?</p>
+					<p>Where are people waiting the longest?</p>
 				</section>
 
 				<section>
@@ -136,110 +162,9 @@
 					<img src="./img/map_04.png" width="480"/>
 				</section>
 
-			<section>
-					<h1>Mapping Boston Rapid Transit Stations</h1>
-					<p>Who gets a new station?</p>
-				</section>
-
 				<section>
-					<p>Open a new QGIS file</p>
-					<img src="img/new_project_qgis.png" width="800">
-				</section>
-
-				<section>
-					<p>Load Boston Basemap</p>
-					<p>Open As: boston_within10km.shp</p>
-				</section>
-
-				<section>
-					<p>Load Environmental Justice Blocks</p>
-					<p>Open As: EJ_within10km.shp</p>
-				</section>
-
-				<section>
-					<p>Load MBTA Rapid Transit Stations</p>
-					<p>Open As: mbta_stations.shp</p>
-				</section>
-
-				<section>
-					<p>QGIS with Layers</p>
-					<img src="img/three_layers_qgis.png" width="800">
-				</section>
-
-				<section>
-					<p>Where is downtown?</p>
-					<p>What areas are being served and not served?</p>
-				</section>
-
-				<section>
-					<h1><a href="http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/cen2010ej.html" target="_blank">
-						Environmental Justice Neighborhoods
-					</a></h1>
-					<p>What are they?</p>
-					<p>What are their categories?</p>
-				</section>
-
-				<section>
-					<p>Layer Panel: Right-click the EJ layer > Open Attribute Layer</p>
-					<p>Select features using an expression</p>
-					<img src="img/ej_attribute_table_qgis.png" width="800">
-				</section>
-
-				<section>
-					<p>Select by expression > Income = “I”</p>
-					<img src="img/ej_select_income.png" width="1024">
-				</section>
-
-				<section>
-					<p>QGIS -> Edit -> Copy Features</p>
-					<p>QGIS ->Edit -> Paste Features As...  -> New Vector Layer</p>
-					<img src="img/income_selected_qgis.png" width="800">
-				</section>
-
-				<section>
-					<p>Select WGS84 Filename: EJ_income_within10km.shp</p>
-					<img src="img/save_vector_qgis.png" width="640">
-				</section>
-
-				<section>
-					<p>Low Income Environmental Justice Neighborhoods</p>
-					<img src="img/income_selected_qgis_2.png" width="800">
-				</section>
-
-				<section>
-					<h1>Analysis</h1>
-					<p>What are possible relationships to between these neighborhoods and the stations?</p>
-				</section>
-
-				<section>
-					<p>Install NNJOIN: QGIS -> Plugins -> Manage and install plugins...</p>
-					<img src="img/nnjoin.png" width="640">
-				</section>
-
-				<section>
-					<p>Find Environmental Justices Neighborhoods Near MBTA Stations</p>
-					<p>Input vector layer: EJ_income_within10km</p>
-					<p>Join vector layer: MBTA_NODE_WGS84</p>
-					<p>Output layer: ej_near_mbta</p>
-				</section>
-
-				<section>
-					<p>Map neighborhoods by distance to a station</p>
-					<img src="img/graduated.png" width="800">
-				</section>
-
-				<section>
-					<p>Create Categories</p>
-					<p>Right Click -> Layer Properties -> Style ->Graduated:</p>
-					<p>Select Graduated</p>
-					<p>Column: distance</p>
-					<p>Color Ramp: Blues</p>
-					<p>Mode: Quantile</p>
-				</section>
-
-				<section>
-					<p>Examine your Map</p>
-					<img src="img/final_map.png" width="800">
+					<p>What additional data would be useful?</p>
+					<p>How might you go about getting it?</p>
 				</section>
 
 				<section>
