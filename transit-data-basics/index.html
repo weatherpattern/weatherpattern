@@ -31,7 +31,7 @@
 						Install R</a></p>
 					<p><a href="https://www.rstudio.com/products/rstudio/download/" target="_blank">
 						Install RStudio</a></p>
-					<p><a href="https://drive.google.com/open?id=0B1BulQ4RqPAZTzRKYWpJRE90OGs" target="_blank">
+					<p><a href="https://drive.google.com/open?id=0B1BulQ4RqPAZQV9LazM3ZDZZeDg" target="_blank">
 						Download Zip Files</a></p>
 				</section>
 
@@ -40,11 +40,11 @@
 				</section>
 
 				<section>
-					<h1>What you will learn? today</h1>
+					<h1>What you will learn today?</h1>
 					<p>Where to find transit data</p>
 					<p>Strategies on wrangling transit data</p>
 					<p>Ways of determining performance</p>
-					<p>Mapping the relability of a transit system</p>
+					<p>Mapping the reliability  of a transit system</p>
 				</section>
 
 				<section>
@@ -55,44 +55,46 @@
 					<p><a href="http://realtime.mbta.com/portal" target="blank">
 						MBTA Developer Portal
 					</a></p>
-					<p><a href="http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/mbta.html" target="_blank">
-						MassGIS Data
-					</a></p>
 					<p><a href="http://web.mta.info/developers/" target="_blank">MTA Developer Portal
 					</a><p>
-					<p><a href="https://transit.land/" target="_blank">Transit.land
-					</a></p>
 				</section>
 
 				<section>
 					<h1>Kinds of Transit Data</h1>
 					<p>Shapefiles</p>
 					<p>Historical Archives (e.g. CSV)</p>
-					<p>Static and Realtime Data (e.g. <a href="https://developers.google.com/transit/gtfs/" target="_blank>">GTFS</a>)</p>
+					<p>General Transit Feed Specification Static and Realtime (<a href="https://developers.google.com/transit/gtfs/" target="_blank>">
+						GTFS</a>)</p>
 				</section>
 
 				<section>
 					<h1>How do you measure performance?</h1>
-					<p>Mapping MBTA Green Line's Reliability</p>
 				</section>
 
 				<section>
 					<h1>It's complicated.</h1>
 					<p><a href="http://www.mbtabackontrack.com/performance/index.html#/explanations#reliabilitysubway" target="_blank">
 						MBTA</a></p>
+					<p><a href="http://www.mbtabackontrack.com/blog/36-subway-reliability" target="_blank">
+						MBTA Subway reliability</a></p>
 					<p><a href="http://web.mta.info/developers/performance.html" target="_blank">
-							MTA</a></p>
+						MTA</a></p>
+					<p><a href="http://nathan9.github.io/nycbusperformance/" target="blank">NYC Bus Performance</a></p>
+					<p><a href="http://busturnaround.nyc/" target="blank">Bus Turnaround</a></p>
 				</section>
 
 				<section>
-					<p>Open TDashboardData_reliability_20160801-20160831.xlsx</p>
+					<p>Open TDashboardData_reliability_20160301-20160331.xlsx</p>
 					<p>Or download the data.</p>
-					<p><a href="http://www.mbtabackontrack.com/performance/index.html#/download" target="blank"> MBTA On Time Performance</a> </p>
+					<p><a href="http://www.mbtabackontrack.com/performance/index.html#/download" target="blank">
+						MBTA On Time Performance</a> </p>
 				</section>
 
 				<section>
 			  	<p>Open mbta_station.csv</p>
-					<p>Source is from the MBTA Rapid Transit Station shapefile, with some manual clean up.
+					<p>This file contains coordinates of the stations.
+					<p>Source is from the MBTA Rapid Transit Station shapefile, with some manual clean up.</p>
+					<p>MBTA GTFS Static Feed provides similar data, also requiring some manual clean up.</p>
 				</section>
 
 
@@ -126,15 +128,14 @@
 				</section>
 
 				<section>
-					<p>Create Map</p>
-					<img src="./img/create_map.png" width="800"/>
-				</section>
-
-				<section>
 					<p>Change Type to Date</p>
 					<img src="./img/change_type.png" width="800"/>
 				</section>
 
+				<section>
+					<p>Create Map</p>
+					<img src="./img/create_map.png" width="800"/>
+				</section>
 
 				<section>
 					<p>Make A Map</p>
@@ -169,11 +170,37 @@
 
 				<section>
 					<h1>Thanks to:</h1>
-					<p>You, Maptime Boston, TransitCenter, Nature of Cities, Eric Brelsford</p>
+					<p>You, Carto, TransitCenter, Nature of Cities</p>
 					<p>Stay in touch: <a href="https://groups.google.com/forum/#!forum/transit-data-toolkit" target="_blank">
 						Open Transit Data Toolkit Email List</a>
 					</p>
+				</section>
 
+				<section>
+					<p>Resources: Transit Data</p>
+					<p><a href="http://www.mbtabackontrack.com/performance/index.html#/download" target="blank">MBTA Back On Track</a></p>
+					<p><a href="http://realtime.mbta.com/portal" target="blank">MBTA-realtime Developer Portal</a></p>
+					<p><a href="http://web.mta.info/developers/MTA-Bus-Time-historical-data.html" target="blank">MTA Bus Time</a></p>
+					<p><a href="http://web.mta.info/developers/" target="blank">MTA Developer Resources</a></p>
+					<p><a href="http://www.theopenbus.com/" target="blank">The Open Bus</a></p>
+					<p><a href="https://transit.land/" target="blank">TransitLand</a></p>
+				</section>
+
+				<section>
+					<p>Other Resources:</p>
+					<p><a href="http://gtfs.org/best-practices/" target="blank">GTFS Data Best Practices</a></p>
+					<p><a href="https://groups.google.com/forum/#!forum/mtadeveloperresources" target="blank">NYC MTA Developers Google Group</a></p>
+					<p><a href="https://groups.google.com/forum/#!forum/massdotdevelopers" target="blank">Mass DOT Developers Google Group</a></p>
+					<p><a href="http://shop.oreilly.com/product/0636920032861.do" target="blank">Data Wrangling with Python</a></p>
+					<p>Google, Stack Overflow, Stack Exchange</p>
+				</section>
+
+				<section>
+					<p>Resources: Performance</p>
+					<p><a href="https://massdot.app.box.com/v/dashboard-data-dictionary">MBTA Dashboard Data Dictionary</a></p>
+					<p><a href="http://www.mbtabackontrack.com/blog/36-subway-reliability"MBTA Subway Reliability</a></p>
+					<p><a href="http://nathan9.github.io/nycbusperformance/" target="blank">NYC Bus Performance</a></p>
+					<p><a href="http://busturnaround.nyc/" target="blank">Bus Turnaround</a></p>
 				</section>
 
 			</div>
