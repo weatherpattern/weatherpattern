@@ -26,13 +26,15 @@
 			<div class="slides">
 				<section>
 					<h1>Transit Data Mapping Basics</h1>
-					<p>Young Professionals In Transit - Baltimore - August 08 2018<p>
+					<p>Young Professionals In Transportation - Baltimore - August 08 2018<p>
+					<p><a href="https://bit.ly/2ORDnMX" target="_blank">
+						bit.ly/2ORDnMX</a></p>
 					<p><a href="https://cran.rstudio.com/" target="_blank">
-						Install R</a></p>
-					<p><a href="https://www.rstudio.com/products/rstudio/download/" target="_blank">
+						Install R</a> and 
+					   <a href="https://www.rstudio.com/products/rstudio/download/" target="_blank">
 						Install RStudio</a></p>
-					<p><a href="https://drive.google.com/open?id=0B1BulQ4RqPAZb3hiWkhqM0NOcGM" target="_blank">
-						Download Zip Files</a></p>
+					<p><a href="https://drive.google.com/file/d/1nS4sq-O6KYQL2VVl_lxiW1LqibSib_08/view?usp=sharing" target="_blank">
+						Download ypt-balt.zip file</a></p>
 				</section>
 
 				<section>
@@ -43,20 +45,21 @@
 					<h1>What will you learn today:</h1>
 					<p>Where to find transit data</p>
 					<p>Strategies on wrangling transit data</p>
-					<p>Ways of determining reliability</p>
-					<p>Mapping the reliability  of a transit system</p>
+					<p>Mapping a transit system</p>
+					<p>Evaluating access to a transit system</p>
 				</section>
 
 				<section>
 					<h1>Getting Data</h1>
+					<p><a href="http://web.mta.info/developers/" target="_blank">MTA Developer Portal
+					</a><p>
 					<p><a href="http://www.mbtabackontrack.com/" target="_blank">
 						MBTA Back on Track
 					</a></p>
-					<p><a href="http://realtime.mbta.com/portal" target="blank">
-						MBTA Developer Portal
+					<p><a href="https://docs.digital.mass.gov/massgis" target="_blank">
+						MassGIS
 					</a></p>
-					<p><a href="http://web.mta.info/developers/" target="_blank">MTA Developer Portal
-					</a><p>
+
 				</section>
 
 				<section>
@@ -69,39 +72,38 @@
 				</section>
 
 				<section>
-					<h1>How do you measure performance?</h1>
+					<h1>Why is coverage and accessiblity important?</h1>
 				</section>
 
 				<section>
-					<h1>It's complicated.</h1>
-					<p><a href="http://www.mbtabackontrack.com/performance/index.html#/explanations#reliabilitysubway" target="_blank">
-						MBTA</a></p>
-					<p><a href="http://www.mbtabackontrack.com/blog/36-subway-reliability" target="_blank">
-						MBTA Subway reliability</a></p>
-					<p><a href="http://web.mta.info/developers/performance.html" target="_blank">
-						MTA</a></p>
-					<p><a href="http://nathan9.github.io/nycbusperformance/" target="blank">NYC Bus Performance</a></p>
-					<p><a href="http://busturnaround.nyc/" target="blank">Bus Turnaround</a></p>
+					<p>One reason: coverage provides access to jobs and services</p>
+					<p><a href="https://wagner.nyu.edu/impact/research/publications/mobility-economic-opportunity-and-new-york-city-neighborhoods" target="_blank">
+						Mobility, Economic Opportunity and New York City Neighborhoods</a></p>
+					<p>Among their findings, neighborhoods with the most access to jobs have higher median income, and neighborhoods with low access typically have higher rates of car commuting.</p>
+				</section>
+
+				<section>
+					<p>The Executive Office of Energy and Environmental Affairs (EEA) of MA created an <a href="http://www.mass.gov/eea/docs/eea/ej/2017-environmental-justice-policy.pdf" target="blank">Environmental Justice Policy</a> to address communities who are disproportionally impacted by environmental risks. Communities were identified by: income, national origin, race, color, and English proficiency.</p>
+
 				</section>
 
 				<section>
 					<h1>Let's get started.</h1>
+					<p>Turn to your neighbor and say hi.</p>
 				</section>
 
 				<section>
-					<p>Open TDashboardData_reliability_20160301-20160331.csv</p>
-					<p>Or download the data.</p>
-					<p><a href="http://www.mbtabackontrack.com/performance/index.html#/download" target="blank">
-						MBTA On Time Performance</a> </p>
+					<p>Download the workshop data.</p>
+					<p><a href="https://drive.google.com/file/d/1nS4sq-O6KYQL2VVl_lxiW1LqibSib_08/view?usp=sharing" target="_blank">
+						ypt-balt.zip</a></p>
 				</section>
 
 				<section>
-			  	<p>Open mbta_station.csv</p>
-					<p>This file contains coordinates of the stations.
+			  	<h1>Unzip ypt-balt.zip</h1>
+					<p>mbta-stops.csv contains coordinates of the stations.
 					<p>Source is from the MBTA Rapid Transit Station shapefile, with some manual clean up.</p>
-					<p>MBTA GTFS Static Feed provides similar data, also requiring some manual clean up.</p>
+					<p>Unzip ej2010.zip</p>
 				</section>
-
 
 				<section>
 					<p>Launch R Studio</p>
@@ -113,7 +115,7 @@
 				</section>
 
 				<section>
-					<p>File -> Open File -> rely_analysis.R</p>
+					<p>File -> Open File -> 04-access-stations.R</p>
 					<img src="./img/openfile.png" width="1024"/>
 				</section>
 
@@ -123,59 +125,24 @@
 				</section>
 
 				<section>
-					<p>Open Carto</p>
-					<img src="./img/carto.png" width="1024"/>
-				</section>
-
-				<section>
-					<p>Load New dataset: joindata.csv</p>
-					<img src="./img/data_upload.png" width="800"/>
-				</section>
-
-				<section>
-					<p>Change Type to Date</p>
-					<img src="./img/change_type.png" width="800"/>
-				</section>
-
-				<section>
-					<p>Create A Map</p>
-					<img src="./img/create_a_map.png" width="800"/>
-				</section>
-
-				<section>
-					<p>Make A Map</p>
-					<img src="./img/map_01.png" width="1024"/>
-				</section>
-
-				<section>
-					<p>Select avg(rely) and Choose Color</p>
-					<img src="./img/map_02.png" width="1024"/>
+					<p>Switch to RStudio</p>
 				</section>
 
 				<section>
 					<p>What do you see?</p>
-					<p>Where are people waiting the longest?</p>
+					<p>Where is the most and least access?</p>
 				</section>
 
-				<section>
-					<p>Make Animated Map</p>
-					<p>Under Fill: Choose rely, Quantile, and Color</p>
-					<img src="./img/map_03b.png" width="1024"/>
-				</section>
-
-				<section>
-					<p>under Column: Choose Service Date</p>
-					<img src="./img/map_04.png" width="480"/>
-				</section>
 
 				<section>
 					<p>What additional data would be useful?</p>
+					<p>What is missing from our analysis?</p>
 					<p>How would you use this data and map responsibly?</p>
 				</section>
 
 				<section>
 					<h1>Thanks to:</h1>
-					<p>You, TransitCenter, Nature of Cities, Carto</p>
+					<p>You, TransitCenter, Nature of Cities, YPT</p>
 					<p>Stay in touch: <a href="https://groups.google.com/forum/#!forum/transit-data-toolkit" target="_blank">
 						Open Transit Data Toolkit Email List</a>
 					</p>
