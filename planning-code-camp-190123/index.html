@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Transit Data Mapping</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Transit Data, Data Science, Planning</h1>
+					<p>Planning Code Camp - January 23 2019</p>
+				</section>
+
+				<section>
+					<h1>What is the Open Transit Data Toolkit</h1>
+					<p>Ten Lessons</p>
+					<p>R and RStudio</p>
+					<p>Rapid Transit, Buses, Bike Share, Maps, Surveys</p>
+				</section>
+
+				<section>
+					<h1>Process</h1>
+				</section>
+
+				<section>
+					<p>Getting Data »<p>
+					<p>Data Wrangling »<p>
+					<p>Analysis »<p>
+					<p>Visualization<p>	
+				</section>
+
+				<section>
+					<h1>Why did we make the Open Transit Data Toolkit?</h1>
+					<p>Moving from raw data to insights</p>
+				</section>
+
+				<section>
+					<h1>Why is Open (Transit) Data important?</h1>
+					<p>Informed Decision Making</p>
+					<p>Improved Civic Discourse</p>
+				</section>
+
+				<section>
+					<h1>Kinds of Transit Data</h1>
+					<p>Historical Archives (e.g. CSV)</p>
+					<p>General Transit Feed Specification Static and Realtime (<a href="https://developers.google.com/transit/gtfs/" target="_blank>">
+						GTFS</a>)</p>
+					<p>Shapefiles</p>
+					<p>Survey</p>
+				</section>
+
+				<section>
+					<h1>Transit Data Resources</h1>
+				</section>
+
+				<section>
+					<p><a href="http://www.mbtabackontrack.com/" target="_blank">
+						MBTA Back on Track
+					</a></p>
+					<p><a href="http://realtime.mbta.com/portal" target="blank">MBTA-realtime Developer Portal</a></p>
+					<p><a href="https://docs.digital.mass.gov/massgis" target="_blank">
+						MassGIS
+					</a></p>
+				</section>
+
+				<section>
+					<p><a href="http://web.mta.info/developers/" target="_blank">MTA Developer Portal
+					</a><p>
+					<p><a href="http://web.mta.info/developers/MTA-Bus-Time-historical-data.html" target="blank">MTA Bus Time</a></p>
+					<p><a href="http://web.mta.info/developers/" target="blank">MTA Developer Resources</a></p>
+					<p><a href="http://www.theopenbus.com/" target="blank">The Open Bus</a></p>
+					<p><a href="https://transit.land/" target="blank">TransitLand</a></p>
+				</section>
+
+				<section>
+					<p><a href="http://gtfs.org/best-practices/" target="blank">GTFS Data Best Practices</a></p>
+					<p><a href="https://groups.google.com/forum/#!forum/mtadeveloperresources" target="blank">NYC MTA Developers Google Group</a></p>
+					<p><a href="https://groups.google.com/forum/#!forum/massdotdevelopers" target="blank">Mass DOT Developers Google Group</a></p>
+					<p><a href="http://shop.oreilly.com/product/0636920032861.do" target="blank">Data Wrangling with Python</a></p>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
